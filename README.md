@@ -42,4 +42,31 @@
    - 先用新組合的特徵來訓練 SVM 模型,讓模型學習如何利用這些信息判斷病人是否罹患糖尿病
    - 最後用test data來檢驗模型表現評估方式同樣用準確率、混淆矩陣和分類報告
 
+---
+
+# Precision, Recall, F1-score 
+
+## Precision 
+
+   模型預測為正類（e.g.在疾病檢測中預測為患病）的所有樣本中實際正確的比例,著重在降低誤報確保預測為正類的案例中大多數是真正的正類
+   <br>formula：  
+
+   $$\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}}$$
+   - **TP：** 真正例,正確預測為正類的數量
+   - **FP：** 假正例,預測為正類但實際為負類的數量
+
+## Recall 
+   所有實際為正類的樣本中被模型正確識別出來的比例,著重在降低漏判確保大部分實際正類被正確識別
+   <br>formula：  
+
+   $$\text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}}$$
+ 
+   - **FN (False Negative)：** 假反例,預測為負類但實際為正類的數量
+
+## F1-score
+   精確率和召回率的調和平均,適合在兩者都相當重要時使用從而達到更平衡的效果
+   <br>formula：  
+   
+   $$F1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$$
+
 
